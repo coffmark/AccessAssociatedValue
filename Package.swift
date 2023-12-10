@@ -42,7 +42,7 @@ let package = Package(
 
         // A test target used to develop the macro implementation.
         .testTarget(
-            name: "AccessAssociatedValueTests",
+            name: "AccessAssociatedValueMacrosTests",
             dependencies: [
                 "AccessAssociatedValueMacros",
                 .product(name: "SwiftSyntaxMacrosTestSupport", package: "swift-syntax"),
