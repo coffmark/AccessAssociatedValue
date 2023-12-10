@@ -1,0 +1,12 @@
+name: build
+on: [push]
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@4.1.1
+      - name: Show Xcode Version
+        run: xcodebuild --version
+      - name: Build
+        run: xcodebuild -scheme AccessAssociatedValueClient -destination "platform=macOS"
