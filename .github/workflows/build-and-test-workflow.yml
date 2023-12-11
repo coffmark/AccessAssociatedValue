@@ -1,4 +1,4 @@
-name: Build
+name: Build & Test
 on: [push]
 jobs:
   build:
@@ -7,8 +7,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Select Xcode Version
-        run: sudo xcode-select -s '/Applications/Xcode_15.0.1.app/Contents/Developer'
+        run: sudo xcode-select -s '/Applications/Xcode_15.0.app/Contents/Developer'
       - name: Show Xcode Version
         run: xcodebuild -version
       - name: Build
         run: xcodebuild -scheme AccessAssociatedValueClient -destination "platform=macOS"
+      - name: Test
+        run: xcodebuild test -scheme AccessAssociatedValueTests -destination "platform=macOS"
