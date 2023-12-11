@@ -12,7 +12,9 @@ jobs:
           xcode-version: '15.0.1'
       - name: Show Xcode Version
         run: xcodebuild -version
-      - name: Build
+      - name: Build AccessAssociatedValueClient
         run: xcodebuild -scheme AccessAssociatedValueClient -destination "platform=macOS"
-      - name: Test
+      - name: Build AccessAssociatedValueTests
+        run: xcodebuild -scheme AccessAssociatedValueTests -destination "platform=macOS"
+      - name: Test AccessAssociatedValueTests
         run: xcodebuild test -scheme AccessAssociatedValueTests -destination "platform=macOS"
