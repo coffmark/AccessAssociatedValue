@@ -1,4 +1,4 @@
-name: build
+name: Build
 on: [push]
 jobs:
   build:
@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Select Xcode Version
+        run: sudo xcode-select -s '/Applications/Xcode_14.0.1.app/Contents/Developer'
       - name: Show Xcode Version
         run: xcodebuild -version
       - name: Build
