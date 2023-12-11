@@ -14,7 +14,5 @@ jobs:
         run: xcodebuild -version
       - name: Build AccessAssociatedValueClient
         run: xcodebuild -scheme AccessAssociatedValueClient -destination "platform=macOS"
-      - name: Build AccessAssociatedValueTests
-        run: xcodebuild -scheme AccessAssociatedValueTests -destination "platform=macOS"
       - name: Test AccessAssociatedValueTests
         run: xcodebuild test -scheme AccessAssociatedValueTests -destination "platform=macOS"
