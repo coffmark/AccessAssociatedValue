@@ -12,11 +12,7 @@ let package = Package(
         .library(
             name: "AccessAssociatedValue",
             targets: ["AccessAssociatedValue"]
-        ),
-        .executable(
-            name: "AccessAssociatedValueClient",
-            targets: ["AccessAssociatedValueClient"]
-        ),
+        )
     ],
     dependencies: [
         // Depend on the Swift 5.9 release of SwiftSyntax
