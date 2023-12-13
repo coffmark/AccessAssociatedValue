@@ -19,7 +19,8 @@ print(viewState.success?.cards) // ["Card1", "Card2"]
 
 1. File > Add to Packages
 2. Search `https://github.com/coffmark/AccessAssociatedValue`
-3. Select Project
+3. Select `Add to Target`
+4. Click `Add Package`
 
 ## Contributed
 
