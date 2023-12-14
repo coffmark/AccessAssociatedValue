@@ -6,7 +6,7 @@ on: push
     #- cron: '0 10 * * 6'
 jobs:
   renovate:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
